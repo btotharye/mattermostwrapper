@@ -21,7 +21,7 @@ class MattermostAPI:
     
     def login(self, login, password):
         """Login to the corresponding (self.url) mattermost instance."""
-        props = { 'login_id': login, 'password': password }
+        props = {'login_id': login, 'password': password}
         p = requests.post(self.url + '/users/login', data=json.dumps(props))
         self.token = p.headers["Token"] # Store the token for further requests
         return json.loads(p.text)
@@ -29,3 +29,11 @@ class MattermostAPI:
     def get_teams(self):
         return self.get('/teams')
 
+    def get_channel_listing(self):
+        teams = self.get('/teams')
+        if len(teams) == 1:
+            team_id = (teams[0]['id'])
+            channel_listing = self.get('/teams/' + team_id + '/channels')
+            return channel_listing
+        else:
+            return "Found more than 1 team, cannot continue"
