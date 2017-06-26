@@ -2,10 +2,10 @@
 This will be a api v4 wrapper for mattermost.  The plan is to use this for bots, etc.
 
 # Usage
-1. Clone the project and import it into your new script and add the following code to your python file, replace the url, login, and pw to match your settings for your server:
+1. Clone the project and import it into your new script and add the following code to your python file, replace the url, login, and pw to match your settings for your server as well as your team name you want to interact with:
 
 ```
-m = MattermostAPI("your mattermost url")
+m = MattermostAPI("your mattermost url", "team_name")
 m.login("login", "password")
 
 # Test showing the teams
@@ -28,4 +28,5 @@ for channel in channel_list:
 ```
 
 This will login and print out channel listings for your team.
+
 
