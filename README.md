@@ -20,7 +20,7 @@ from mattermost_wrapper import wrapper
 m = wrapper.MattermostAPI("https://yoururlhere/api/v4")
 m.login("username", "password")
 
-channel_list = m.get_channel_listing()
+channel_list = m.get_channel_listing('team_name')
 
 for channel in channel_list:
     print(channel['display_name'])
