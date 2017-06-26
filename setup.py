@@ -16,7 +16,7 @@ def long_description():
 
 setup(
     name="Mattermost API v4 Wrapper",
-    version="0.0.1",
+    version="1.0.0-dev",
     author="Brian Hopkins",
     author_email="btotharye@gmail.com",
     description=("A mattermost api v4 wrapper to interact with api"),
