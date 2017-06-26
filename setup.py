@@ -28,7 +28,17 @@ setup(
     install_requires=install_requires,
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Topic :: Software Development",
-        "License :: OSI Approved :: MIT License"
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3.6',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'Intended Audience :: Mattermost Devs',
+        'License :: OSI Approved :: MIT License',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Software Development',
+        'Topic :: System :: Networking',
+        'Topic :: Terminals',
+        'Topic :: Text Processing',
+        'Topic :: Utilities'
     ],
 )
