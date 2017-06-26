@@ -29,6 +29,6 @@ setup(
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Software Development",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: MIT License"
     ],
 )
