@@ -29,11 +29,9 @@ class MattermostAPI:
     def get_teams(self):
         return self.get('/teams')
 
-    def get_channel_listing(self):
+    def get_channel_listing(self, display_name):
         teams = self.get('/teams')
-        if len(teams) == 1:
-            team_id = (teams[0]['id'])
-            channel_listing = self.get('/teams/' + team_id + '/channels')
-            return channel_listing
-        else:
-            return "Found more than 1 team, cannot continue"
+        for team in teams:
+            if team['display_name'].lower() == display_name:
+                channel_listing = self.get('/teams/' + team['id'] + '/channels')
+                return channel_listing
