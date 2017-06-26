@@ -4,9 +4,11 @@ import json
 import requests
 
 class MattermostAPI:
-    def __init__(self, url):
+    def __init__(self, url, team):
         self.url = url
         self.token = ""
+        self.team = team
+        self.team_id = ""
 
     def get(self, request):
         """
@@ -35,16 +37,33 @@ class MattermostAPI:
         props = {'login_id': login, 'password': password}
         p = requests.post(self.url + '/users/login', data=json.dumps(props))
         self.token = p.headers["Token"] # Store the token for further requests
+        self.get_team_id()
         return json.loads(p.text)
+
+    def get_team_id(self):
+        teams = self.get('/teams')
+        for team in teams:
+            if team['display_name'].lower() == self.team:
+                self.team_id = team['id']
+
     
     def get_teams(self):
         """
         Get team listing back
         :return:
         """
-        return self.get('/teams')
+        return self.get('/teams/')
 
-    def get_channel_listing(self, display_name):
+    def get_team_members(self):
+        """
+        This will take in a name of a team and then get the list of team members.
+        :param display_name:
+        :return:
+        """
+        return self.get('/teams/' + self.team_id + '/members')
+
+
+    def get_channel_listing(self):
         """
         This function takes in display_name of your team and gets the channel listing for that team.
         :param display_name:
@@ -52,7 +71,7 @@ class MattermostAPI:
         """
         teams = self.get('/teams')
         for team in teams:
-            if team['display_name'].lower() == display_name:
+            if team['display_name'].lower() == self.team:
                 channel_listing = self.get('/teams/' + team['id'] + '/channels')
                 return channel_listing
 
