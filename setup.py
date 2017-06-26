@@ -24,21 +24,6 @@ setup(
     license="MIT",
     keywords="mattermost wrapper api",
     url="https://btotharye.com",
-    packages=find_packages(),
     install_requires=install_requires,
-    classifiers=[
-        "Development Status :: 3 - Alpha",
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3.6',
-        'Environment :: Console',
-        'Intended Audience :: Developers',
-        'Intended Audience :: Mattermost Devs',
-        'License :: OSI Approved :: MIT License',
-        'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Software Development',
-        'Topic :: System :: Networking',
-        'Topic :: Terminals',
-        'Topic :: Text Processing',
-        'Topic :: Utilities'
-    ],
+    packages=find_packages(),
 )
