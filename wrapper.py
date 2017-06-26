@@ -29,8 +29,3 @@ class MattermostAPI:
     def get_teams(self):
         return self.get('/teams')
 
-m = MattermostAPI("your mattermost url")
-m.login("login", "password")
-
-# Test showing the teams
-m.get_teams()
