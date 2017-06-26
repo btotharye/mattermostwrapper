@@ -15,15 +15,13 @@ def long_description():
         return f.read()
 
 setup(
-    name="Mattermost API v4 Wrapper",
+    name="Mattermost-API",
     version="1.0.0-dev",
     author="Brian Hopkins",
     author_email="btotharye@gmail.com",
     description=("A mattermost api v4 wrapper to interact with api"),
     long_description=long_description,
     license="MIT",
-    keywords="mattermost wrapper api",
-    url="https://btotharye.com",
     install_requires=install_requires,
     packages=find_packages(),
 )
