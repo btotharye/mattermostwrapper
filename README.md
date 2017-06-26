@@ -29,4 +29,18 @@ for channel in channel_list:
 
 This will login and print out channel listings for your team.
 
+You can also do the following to post a test message to the channel off-topic using the wrapper:
+```
+from mattermost_wrapper import wrapper
+
+m = wrapper.MattermostAPI("https://yoururlhere/api/v4")
+m.login("username", "password")
+
+channel_name = 'off-topic'
+message = 'This is a test message'
+post_message = m.post_channel(channel_name, message)
+
+print(post_message)
+```
+
 
