@@ -1,5 +1,6 @@
 from distutils.core import setup
 
+
 setup(
     name="Mattermost-API",
     version="1.0.0",
@@ -7,5 +8,5 @@ setup(
     author_email="btotharye@gmail.com",
     description=("A mattermost api v4 wrapper to interact with api"),
     license="MIT",
-    packages=[''],
+    packages=['wrapper'],
 )
