@@ -25,6 +25,7 @@ setup(
     keywords="mattermost wrapper api",
     url="https://btotharye.com",
     packages=find_packages(),
+    install_requires=install_requires,
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Software Development",
