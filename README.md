@@ -2,9 +2,18 @@
 This will be a api v4 wrapper for mattermost.  The plan is to use this for bots, etc.
 
 # Usage
-1. Change the m = MattermostAPI("") at the end of the script to be your url, eventually will have this setup so it is a variable but still testing.
+1. Clone the project and import it into your new script and add the following code to your python file, replace the url, login, and pw to match your settings for your server:
 
-2. Change the m.login("login", "password") to match your login and password
+```
+m = MattermostAPI("your mattermost url")
+m.login("login", "password")
+
+# Test showing the teams
+print(m.get_teams())
+```
+
+This will login and print out the teams you have to show you how the api works.  More calls will be available soon for the wrapper.
+
 
 # Testing
 This is still in testing phase and I recommend just using the code in ipython to test, you can then interactively after logging in via the
