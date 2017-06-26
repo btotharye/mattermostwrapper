@@ -80,7 +80,7 @@ class MattermostAPI:
                 channel_listing = self.get('/teams/' + team['id'] + '/channels')
                 return channel_listing
 
-    def post_channel(self, channel_id, message):
+    def post_channel(self, channel_id, message, post_user):
         """
         Creates a new post to a channel
         :param channel_id:
@@ -88,7 +88,7 @@ class MattermostAPI:
         :return:
         """
         headers = {"Authorization": "Bearer " + self.token}
-        props = {'channel_id': channel_id, 'message': message}
+        props = {'username': post_user ,'channel_id': channel_id, 'message': message}
         p = requests.post(self.url + '/posts', headers=headers, data=json.dumps(props))
         return p
 
