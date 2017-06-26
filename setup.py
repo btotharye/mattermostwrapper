@@ -18,7 +18,7 @@ setup(
     description=("A mattermost api v4 wrapper to interact with api"),
     long_description=long_description,
     license="MIT",
-    packages=find_packages(),
+    packages=['wrapper'],
     install_requires=['requests'],
 )
 
