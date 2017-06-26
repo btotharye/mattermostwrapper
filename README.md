@@ -12,5 +12,20 @@ m.login("login", "password")
 print(m.get_teams())
 ```
 
-This will login and print out the teams you have to show you how the api works.  More calls will be available soon for the wrapper.
+Get channel listing example code:
+
+```
+from mattermost_wrapper import wrapper
+
+m = wrapper.MattermostAPI("https://yoururlhere/api/v4")
+m.login("username", "password")
+
+channel_list = m.get_channel_listing()
+
+for channel in channel_list:
+    print(channel['display_name'])
+    
+```
+
+This will login and print out channel listings for your team.
 
