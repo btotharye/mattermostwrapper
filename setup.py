@@ -12,12 +12,14 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="Mattermost-API",
-    version="1.1.0",
+    packages=['wrapper'],
+    version="0.1",
     author="Brian Hopkins",
     author_email="btotharye@gmail.com",
+    url='https://github.com/btotharye/mattermost_wrapper.git'
     description=("A mattermost api v4 wrapper to interact with api"),
     long_description=long_description,
     license="MIT",
-    packages=['wrapper'],
+    classifiers=[],
 )
 
