@@ -13,6 +13,9 @@ setup(
     download_url='https://github.com/btotharye/mattermost_wrapper/archive/0.1.tar.gz',
     description=("A mattermost api v4 wrapper to interact with api"),
     license="MIT",
+    install_requires=[
+          'requests',
+      ],
     classifiers=[],
 )
 
