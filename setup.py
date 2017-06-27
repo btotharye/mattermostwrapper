@@ -12,13 +12,12 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="Mattermost-API",
-    version="2.0.0",
+    version="1.1.0",
     author="Brian Hopkins",
     author_email="btotharye@gmail.com",
     description=("A mattermost api v4 wrapper to interact with api"),
     long_description=long_description,
     license="MIT",
-    packages=find_packages(),
-    install_requires=['requests'],
+    packages=['wrapper'],
 )
 
