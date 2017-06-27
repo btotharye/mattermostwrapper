@@ -1,25 +1,17 @@
 # Always prefer setuptools over distutils
-from setuptools import setup, find_packages
-# To use a consistent encoding
-from codecs import open
-from os import path
+from setuptools import setup
 
-here = path.abspath(path.dirname(__file__))
 
-# Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
 
 setup(
-    name="Mattermost-API",
+    name="mattermost-wrapper",
     packages=['wrapper'],
-    version="0.1",
+    version="0.3",
     author="Brian Hopkins",
     author_email="btotharye@gmail.com",
     url='https://github.com/btotharye/mattermost_wrapper.git',
-    download_url='https://github.com/btotharye/mattermost_wrapper/archive/0.1.tar.gz',
+    download_url='https://github.com/btotharye/mattermost_wrapper/archive/0.3.tar.gz',
     description=("A mattermost api v4 wrapper to interact with api"),
-    long_description=long_description,
     license="MIT",
     classifiers=[],
 )
