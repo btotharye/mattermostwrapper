@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/btotharye/mattermost_wrapper.png?label=ready&title=Ready)](https://waffle.io/btotharye/mattermost_wrapper?utm_source=badge)
 # Python Mattermost v4 API Wrapper
 This will be a api v4 wrapper for mattermost.  The plan is to use this for bots, etc.
 
