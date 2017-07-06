@@ -45,7 +45,6 @@ class MattermostAPI:
         for team in teams:
             if team['display_name'].lower() == self.team:
                 self.team_id = team['id']
-
     
     def get_teams(self):
         """
@@ -66,7 +65,6 @@ class MattermostAPI:
         user_request = self.get('/users/' + user_id)
         username = user_request['username']
         return username
-
 
     def get_channel_listing(self):
         """
@@ -91,7 +89,3 @@ class MattermostAPI:
         props = {'username': post_user ,'channel_id': channel_id, 'message': message}
         p = requests.post(self.url + '/posts', headers=headers, data=json.dumps(props))
         return p
-
-
-
-
