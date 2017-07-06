@@ -15,6 +15,7 @@ setup(
     license="MIT",
     install_requires=[
           'requests',
+          'pytest-runner'
       ],
     classifiers=[],
 )
