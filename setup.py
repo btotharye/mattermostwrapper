@@ -16,7 +16,6 @@ setup(
     install_requires=[
           'requests',
       ],
-    classifiers=[],   
-    ]
+    classifiers=[],
 )
 
