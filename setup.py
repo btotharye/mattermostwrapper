@@ -6,7 +6,7 @@ from setuptools import setup
 setup(
     name="mattermostwrapper",
     packages=['wrapper'],
-    version="0.1",
+    version="1.0",
     author="Brian Hopkins",
     author_email="btotharye@gmail.com",
     url='https://github.com/btotharye/mattermostwrapper.git',
