@@ -5,6 +5,9 @@ This will be a api v4 wrapper for mattermost.  The plan is to use this for bots,
 # Installation
 `pip install mattermostwrapper`
 
+# Documentation
+Will be updating the documentation but it can be found at http://mattermostwrapper.readthedocs.io/en/latest/
+
 # Usage
 1. Clone the project and import it into your new script and add the following code to your python file, replace the url, login, and pw to match your settings for your server as well as your team name you want to interact with:
 
