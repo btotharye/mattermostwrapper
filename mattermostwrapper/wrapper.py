@@ -43,7 +43,7 @@ class MattermostAPI:
     def get_team_id(self):
         teams = self.get('/teams')
         for team in teams:
-            if team['display_name'].lower() == self.team:
+            if team['name'].lower() == self.team:
                 self.team_id = team['id']
     
     def get_teams(self):
@@ -51,7 +51,7 @@ class MattermostAPI:
         Get team listing back
         :return:
         """
-        return self.get('/teams/')
+        return self.get('/teams')
 
     def get_team_members(self):
         """
@@ -74,11 +74,11 @@ class MattermostAPI:
         """
         teams = self.get('/teams')
         for team in teams:
-            if team['display_name'].lower() == self.team:
+            if team['name'].lower() == self.team:
                 channel_listing = self.get('/teams/' + team['id'] + '/channels')
                 return channel_listing
 
-    def post_channel(self, channel_id, message, post_user):
+    def post_channel(self, channel_id, message):
         """
         Creates a new post to a channel
         :param channel_id:
@@ -86,6 +86,6 @@ class MattermostAPI:
         :return:
         """
         headers = {"Authorization": "Bearer " + self.token}
-        props = {'username': post_user ,'channel_id': channel_id, 'message': message}
+        props = {'channel_id': channel_id, 'message': message}
         p = requests.post(self.url + '/posts', headers=headers, data=json.dumps(props))
         return p
