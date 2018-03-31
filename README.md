@@ -16,9 +16,9 @@ print(m.get_teams())
 Get channel listing example code:
 
 ```
-from mattermost_wrapper import wrapper
+from mattermostwrapper import MattermostAPI
 
-m = wrapper.MattermostAPI("https://yoururlhere/api/v4")
+m = MattermostAPI("https://yoururlhere/api/v4")
 m.login("username", "password")
 
 channel_list = m.get_channel_listing('team_name')
@@ -32,14 +32,14 @@ This will login and print out channel listings for your team.
 
 You can also do the following to post a test message to the channel off-topic using the wrapper:
 ```
-from mattermost_wrapper import wrapper
+from mattermostwrapper import MattermostAPI
 
-m = wrapper.MattermostAPI("https://yoururlhere/api/v4")
+m = MattermostAPI("https://yoururlhere/api/v4")
 m.login("username", "password")
 
-channel_name = 'off-topic'
+channel_id = 'channel_id_goes_here'
 message = 'This is a test message'
-post_message = m.post_channel(channel_name, message)
+post_message = m.post_channel(channel_id, message)
 
 print(post_message)
 ```
