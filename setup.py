@@ -4,7 +4,7 @@ from setuptools import setup
 
 
 setup(
-    name="mattermost-wrapper",
+    name="mattermostwrapper",
     packages=['wrapper'],
     version="0.1",
     author="Brian Hopkins",
