@@ -4,11 +4,12 @@ import json
 import requests
 
 class MattermostAPI:
-    def __init__(self, url, team):
+    def __init__(self, url, team, token=""):
         self.url = url
-        self.token = ""
+        self.token = token
         self.team = team
         self.team_id = ""
+
 
     def get(self, request):
         """
@@ -85,7 +86,9 @@ class MattermostAPI:
         :param message:
         :return:
         """
+        print(f"The post channel token is: {self.token}")
         headers = {"Authorization": "Bearer " + self.token}
         props = {'channel_id': channel_id, 'message': message}
         p = requests.post(self.url + '/posts', headers=headers, data=json.dumps(props))
+        print(f"The post channel results are: {p}")
         return p
